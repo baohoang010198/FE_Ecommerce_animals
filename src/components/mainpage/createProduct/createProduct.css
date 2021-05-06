@@ -1,0 +1,198 @@
+  .create_product{
+      width: 100%;
+      margin: 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+  }
+  .upload{
+    max-width: 450px;
+    height: 500px;
+    width: 100%;
+    border: 1px solid #dddd;
+    padding: 15px;
+    margin: 20px;
+    position: relative;
+    border: 4px solid #e5e5e5;
+  }
+  #file_up{
+    position: relative;
+    width:100%;
+    height: 100%;
+    outline: none;
+    
+  }
+
+  #file_up::before {
+    content: "+";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+    color: rgb(250,200,107);
+    font-size: 17rem;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+    
+  }
+
+  #file_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+  }
+  #file_img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+ .create_product form {
+    max-width: 500px;
+    min-width: 290px;
+    width: 100%;
+    margin: 15px 30px;
+  }
+  
+  #file_img span{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: crimson;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 6px 10px;
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    cursor: pointer;
+    
+  }
+
+  .create_product  span:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1.1) rotateX(0);
+  }
+
+  .create_product  span:active {
+    transform: scale(1.05) rotateX(-10deg);
+  }
+  .create_product fieldset {
+    padding: 0;
+    border: none;
+  }
+  
+ .create_product legend {
+    font-weight: 400;
+  }
+  
+  .create_product legend,
+  .create_product label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  
+ .create_product input[type=text],
+  .create_product input[type=number],
+  .create_product textarea,
+  .create_product select {
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.25rem;
+    border: 4px solid #e5e5e5;
+    outline: none;
+    transition-property: none;
+    transition-duration: none;
+  }
+  .create_product input[type=text]:focus,
+ .create_product textarea:focus,
+  .create_product select:focus {
+    border-color:#555;
+  }
+  
+ .create_product  textarea {
+    min-width: 40px;
+    width: 100%;
+  }
+  
+ .create_product input[type=text]{
+    height: 34px;
+  }
+  
+ .create_product select {
+    height: 45px;
+  }
+  
+  .create_product input[type=checkbox],
+ .create_product input[type=radio] {
+    position: relative;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    margin: 0 0.5rem;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    transition-property: none;
+    transition-duration: none;
+  }
+  
+  .create_product input[type=checkbox] {
+    border-radius: 5px;
+  }
+  .create_product input[type=checkbox]:checked {
+    background-color: #555;
+    border: none;
+  }
+ .create_product  input[type=checkbox]:checked:after {
+    display: block;
+    content: "";
+    height: 4px;
+    width: 10px;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: translate(5px, 6px) rotate(-45deg) scale(1);
+  }
+  
+  .create_product input[type=radio] {
+    border-radius: 50%;
+  }
+  .create_product input[type=radio]:checked {
+    border-width: 5px;
+    border-color: white;
+    background-color: #555;
+  }
+  
+ .create_product form button {
+   margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    background: #555;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+ .create_product form button:hover {
+    cursor: pointer;
+    background-color: #555;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1.1) rotateX(0);
+  }
+  .create_product form button:active {
+    background-color: #555;
+    transform: scale(1.05) rotateX(-10deg);
+  }
