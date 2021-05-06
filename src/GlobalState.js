@@ -12,7 +12,7 @@ export const DataProvider = ({ children })=>{
         const firstLogin = localStorage.getItem('firstLogin');
         if(firstLogin){
             const refreshToken = async ()=>{
-                const res = await axios.get('/user/refresh_token');
+                const res = await axios.get('https://animals-ecommerce.herokuapp.com/user/refresh_token');
                 setToken(res.data.accesstoken);
     
                 setTimeout(() => {

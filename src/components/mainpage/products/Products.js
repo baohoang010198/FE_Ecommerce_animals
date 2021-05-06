@@ -23,11 +23,11 @@ function Products() {
 
     const deleteProduct = async (id,public_id)=>{
         try {
-            await axios.post('/api/destroy',{public_id},{
+            await axios.post('https://animals-ecommerce.herokuapp.com/api/destroy',{public_id},{
                 headers:{Authorization:token},
             });
 
-            const destroyProduct =  await axios.delete(`/api/products/${id}`,{
+            const destroyProduct =  await axios.delete(`https://animals-ecommerce.herokuapp.com/api/products/${id}`,{
                 headers:{Authorization:token},
             });
             alert(destroyProduct.data.msg);

@@ -58,7 +58,7 @@ function CreateProduct() {
             formData.append('file',file);
 
             setLoading(true);
-            const res = await axios.post('/api/upload',formData,{
+            const res = await axios.post('https://animals-ecommerce.herokuapp.com/api/upload',formData,{
                 headers:{'content-type':'multipart/form-data', Authorization:token}
             });
             setImages(res.data);
@@ -74,7 +74,7 @@ function CreateProduct() {
         try {
             if(!isAdmin) return alert('Bạn không phải là quản trị viên!');
             setLoading(true);
-            await axios.post('/api/destroy',{public_id:images.public_id},{
+            await axios.post('https://animals-ecommerce.herokuapp.com/api/destroy',{public_id:images.public_id},{
                 headers:{Authorization:token}
             });
             setImages(false);
@@ -96,13 +96,13 @@ function CreateProduct() {
             if(!isAdmin) return alert('Bạn không phải là quản trị viên!');
             if(!images) return alert('Thêm hình ảnh sản phẩm!');
             if(onEdit){
-                const res= await axios.put(`/api/products/${product._id}`,{...product,images},{
+                const res= await axios.put(`https://animals-ecommerce.herokuapp.com/api/products/${product._id}`,{...product,images},{
                     headers:{Authorization:token}
                 });
                 alert(res.data.msg);
             }
             else{
-                const res = await axios.post('/api/products',{...product,images},{
+                const res = await axios.post('https://animals-ecommerce.herokuapp.com/api/products',{...product,images},{
                     headers:{Authorization:token}
                 });
                 alert(res.data.msg);

@@ -15,7 +15,7 @@ function Register() {
     const registerSubmit = async e =>{
         e.preventDefault();
         try {
-            await axios.post('/user/register',{...user});
+            await axios.post('https://animals-ecommerce.herokuapp.com/user/register',{...user});
 
             localStorage.setItem('firstLogin',true);
             

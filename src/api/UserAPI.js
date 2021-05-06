@@ -10,7 +10,7 @@ function UserAPI(token) {
         if(token){
             const getUser = async ()=>{
                 try {
-                    const res = await axios.get('/user/info',{
+                    const res = await axios.get('https://animals-ecommerce.herokuapp.com/user/info',{
                         headers:{Authorization:token}
                     });
                     setIsLogged(true);
@@ -35,7 +35,7 @@ function UserAPI(token) {
 
         if(check){
             setCart([...cart,{...product,quantity:1}]);
-            await axios.patch('user/addCart',{cart:[...cart,{...product,quantity:1}]},{
+            await axios.patch('https://animals-ecommerce.herokuapp.com/user/addCart',{cart:[...cart,{...product,quantity:1}]},{
                 headers:{Authorization:token},
             });
         }else{
